@@ -4,7 +4,7 @@ Between summer 2015 and spring 2016 a number of students in the [Johns Hopkins U
 
 A basic illustration of some of the differences between the two languages is covered in the article [Thinking in R versus Thinking in SAS](https://github.com/lgreski/datasciencectacontent/blob/master/markdown/exampleSortRvsSAS.md), where something that is very straightforward to a SAS programmer \(sorting a data set\), appears to be much more complicated in R.
 
-That said, once a person knows R, things that are very easy in R can be much more complex in SAS. Ironically, one example of this phenomenon is the `pollutantmean()` function that is one of three components in the first programming assignment in the *R Programming* course.
+That said, once a person knows R, things that are very easy in R can be much more complex in SAS. Ironically, one example of this phenomenon is the `pollutantmean()` function that is one of three components in the first programming assignment in the *R Programming* course. As I explain in [Assignment 1: a more elegant solution](http://bit.ly/2kwBBlK), the `pollutantmean()` function can be written in a single line of R code. It turns out that replicating this function in SAS requires quite a bit more than one line of code.
 
 ## Requirements for a SAS-based Solution
 
@@ -14,7 +14,7 @@ The specific requirements for `pollutantmean()` are covered in [Breaking down po
 2. Calculate a mean for one of the pollutants, either `nitrate` or `sulfate`
 3. Write the code for 1 and 2 in a way that one can run the analysis by passing a set of parameters to the code, versus copying & pasting the code to handle different sets of sensors and/or pollutants, as illustrated in the [sample output from the assignment](https://d396qusza40orc.cloudfront.net/rprog%2Fdoc%2Fpollutantmean-demo.html).
 
-<img="./images/rprog-pollutantmeanWithSAS01.png">
+<img src="./images/rprog-pollutantmeanWithSAS01.png">
 
 Reading and calculating a mean of one sensor file in SAS is very easy. We will illustrate this with one of the examples from the assignment 1 instructions from the *R Programming* course.
 

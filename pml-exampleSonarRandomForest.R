@@ -3,6 +3,7 @@
 #
 
 library(mlbench)
+library(randomForest) # needed for varImpPlot
 data(Sonar)
 #
 # review distribution of Class column
@@ -45,14 +46,17 @@ system.time(fit <- train(Class ~ ., method="rf",data=Sonar,trControl = fitContro
 # Step 4: de-register cluster
 #
 stopCluster(cluster)
-
+registerDoSEQ()
 #
 # Step 5: evaluate model fit 
 #
 fit
 fit$resample
 confusionMatrix.train(fit)
+#average OOB error from final model
+mean(fit$finalModel$err.rate[,"OOB"])
+
 plot(fit,main="Accuracy by Predictor Count")
 varImpPlot(fit$finalModel,
            main="Variable Importance Plot: Random Forest")
-
+sessionInfo()
